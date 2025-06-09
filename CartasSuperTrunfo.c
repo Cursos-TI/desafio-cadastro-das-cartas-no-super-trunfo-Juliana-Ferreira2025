@@ -13,7 +13,7 @@ int main() {
     float pibpercapita, pibpercapita1;
     float superpoder, superpoder1;
     int resultadoA, resultadoB, resultadoC, resultadoD, resultadoE, resultadoF, resultadoG;
-    
+
     printf("Olá, bem-vindos ao jogo Super Trunfo!\n");
 
     // Entrada de dados da Carta 1
@@ -111,7 +111,17 @@ int main() {
     printf("Densidade Populacional: %d\n", resultadoE);
     printf("PIB per Capita: %d\n", resultadoF);
     printf("Super Poder: %d\n", resultadoG);
-       
+    
+    printf("***Comparação de cartas (Atributo: População)***\n");
+    printf("Carta 1: %s: %d\n", nomeCidade, populacao);
+    printf("Carta 2: %s: %d\n", nomeCidade1, populacao1);
+    
+    if (populacao > populacao1) {
+        printf("Carta 1 %s venceu!\n", nomeCidade);
+  } else {
+    printf("Carta 2 %s venceu!\n", nomeCidade1);
+  }
+
 
 
     return 0;
