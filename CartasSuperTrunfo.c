@@ -11,7 +11,9 @@ int main() {
     int pontosTuristicos, pontosTuristicos1;
     float densidadepopulacional, densidadepopulacional1;
     float pibpercapita, pibpercapita1;
-
+    float superpoder, superpoder1;
+    int resultadoA, resultadoB, resultadoC, resultadoD, resultadoE, resultadoF, resultadoG;
+    
     printf("Olá, bem-vindos ao jogo Super Trunfo!\n");
 
     // Entrada de dados da Carta 1
@@ -88,6 +90,29 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional1);
     printf("PIB per Capita: %.2f reais\n", pibpercapita1);
+
+    superpoder = (populacao + (area*1000) + (pib*100000000) + pontosTuristicos + pibpercapita) / (densidadepopulacional*1000);
+    superpoder1 = (populacao1 + (area1*1000) + (pib1*100000000) + pontosTuristicos1 + pibpercapita1) / (densidadepopulacional1*1000);
+
+    resultadoA = populacao > populacao1;
+    resultadoB = area > area1;
+    resultadoC = pib > pib1;
+    resultadoD = pontosTuristicos > pontosTuristicos1;
+    resultadoE = pibpercapita > pibpercapita1;
+    resultadoF = densidadepopulacional < densidadepopulacional1;
+    resultadoG = superpoder > superpoder1;
+
+    //comparacao de cartas
+    printf("---Comparação de Cartas:---\n");
+    printf("População: %d\n", resultadoA);
+    printf("Área: %d\n", resultadoB);
+    printf("PIB: %d\n", resultadoC);
+    printf("Pontos Turisticos: %d\n", resultadoD);
+    printf("Densidade Populacional: %d\n", resultadoE);
+    printf("PIB per Capita: %d\n", resultadoF);
+    printf("Super Poder: %d\n", resultadoG);
+       
+
 
     return 0;
 }
